@@ -9,23 +9,32 @@
 /* Begin PBXBuildFile section */
 		FA5DD87E29B72BA900A0F089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD87D29B72BA900A0F089 /* AppDelegate.swift */; };
 		FA5DD88029B72BA900A0F089 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD87F29B72BA900A0F089 /* SceneDelegate.swift */; };
-		FA5DD88229B72BA900A0F089 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD88129B72BA900A0F089 /* ViewController.swift */; };
 		FA5DD88529B72BA900A0F089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5DD88329B72BA900A0F089 /* Main.storyboard */; };
 		FA5DD88829B72BA900A0F089 /* Parse_API.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD88629B72BA900A0F089 /* Parse_API.xcdatamodeld */; };
 		FA5DD88A29B72BAA00A0F089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5DD88929B72BAA00A0F089 /* Assets.xcassets */; };
 		FA5DD88D29B72BAA00A0F089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5DD88B29B72BAA00A0F089 /* LaunchScreen.storyboard */; };
+		FA5DD89B29B72F6A00A0F089 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD89A29B72F6A00A0F089 /* MainTabBarViewController.swift */; };
+		FA5DD89D29B7301D00A0F089 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD89C29B7301D00A0F089 /* APICaller.swift */; };
+		FA5DD8A029B7304B00A0F089 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FA5DD89F29B7304B00A0F089 /* SDWebImage */; };
+		FA5DD8A229B7312300A0F089 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD8A129B7312300A0F089 /* UserViewController.swift */; };
+		FA5DD8A429B7313F00A0F089 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD8A329B7313F00A0F089 /* ListViewController.swift */; };
+		FA5DD8A629B7317B00A0F089 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD8A529B7317B00A0F089 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA5DD87A29B72BA900A0F089 /* Parse API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Parse API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5DD87D29B72BA900A0F089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA5DD87F29B72BA900A0F089 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA5DD88129B72BA900A0F089 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA5DD88429B72BA900A0F089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA5DD88729B72BA900A0F089 /* Parse_API.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Parse_API.xcdatamodel; sourceTree = "<group>"; };
 		FA5DD88929B72BAA00A0F089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5DD88C29B72BAA00A0F089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5DD88E29B72BAA00A0F089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA5DD89A29B72F6A00A0F089 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		FA5DD89C29B7301D00A0F089 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		FA5DD8A129B7312300A0F089 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		FA5DD8A329B7313F00A0F089 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		FA5DD8A529B7317B00A0F089 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5DD8A029B7304B00A0F089 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +68,12 @@
 		FA5DD87C29B72BA900A0F089 /* Parse API */ = {
 			isa = PBXGroup;
 			children = (
-				FA5DD87D29B72BA900A0F089 /* AppDelegate.swift */,
-				FA5DD87F29B72BA900A0F089 /* SceneDelegate.swift */,
-				FA5DD88129B72BA900A0F089 /* ViewController.swift */,
+				FA5DD89929B72E4300A0F089 /* Resources */,
+				FA5DD89829B72BDE00A0F089 /* Managers */,
+				FA5DD89729B72BD400A0F089 /* Utlits */,
+				FA5DD89629B72BCA00A0F089 /* Models */,
+				FA5DD89529B72BBF00A0F089 /* ViewModel */,
+				FA5DD89429B72BB900A0F089 /* View */,
 				FA5DD88329B72BA900A0F089 /* Main.storyboard */,
 				FA5DD88929B72BAA00A0F089 /* Assets.xcassets */,
 				FA5DD88B29B72BAA00A0F089 /* LaunchScreen.storyboard */,
@@ -68,6 +81,55 @@
 				FA5DD88629B72BA900A0F089 /* Parse_API.xcdatamodeld */,
 			);
 			path = "Parse API";
+			sourceTree = "<group>";
+		};
+		FA5DD89429B72BB900A0F089 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA5DD89A29B72F6A00A0F089 /* MainTabBarViewController.swift */,
+				FA5DD8A129B7312300A0F089 /* UserViewController.swift */,
+				FA5DD8A329B7313F00A0F089 /* ListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA5DD89529B72BBF00A0F089 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA5DD89629B72BCA00A0F089 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA5DD8A529B7317B00A0F089 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA5DD89729B72BD400A0F089 /* Utlits */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utlits;
+			sourceTree = "<group>";
+		};
+		FA5DD89829B72BDE00A0F089 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FA5DD89C29B7301D00A0F089 /* APICaller.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FA5DD89929B72E4300A0F089 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA5DD87D29B72BA900A0F089 /* AppDelegate.swift */,
+				FA5DD87F29B72BA900A0F089 /* SceneDelegate.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +148,9 @@
 			dependencies = (
 			);
 			name = "Parse API";
+			packageProductDependencies = (
+				FA5DD89F29B7304B00A0F089 /* SDWebImage */,
+			);
 			productName = "Parse API";
 			productReference = FA5DD87A29B72BA900A0F089 /* Parse API.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +179,9 @@
 				Base,
 			);
 			mainGroup = FA5DD87129B72BA900A0F089;
+			packageReferences = (
+				FA5DD89E29B7304B00A0F089 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = FA5DD87B29B72BA900A0F089 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,10 +209,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA5DD88229B72BA900A0F089 /* ViewController.swift in Sources */,
 				FA5DD87E29B72BA900A0F089 /* AppDelegate.swift in Sources */,
+				FA5DD8A229B7312300A0F089 /* UserViewController.swift in Sources */,
+				FA5DD89B29B72F6A00A0F089 /* MainTabBarViewController.swift in Sources */,
 				FA5DD88829B72BA900A0F089 /* Parse_API.xcdatamodeld in Sources */,
+				FA5DD89D29B7301D00A0F089 /* APICaller.swift in Sources */,
 				FA5DD88029B72BA900A0F089 /* SceneDelegate.swift in Sources */,
+				FA5DD8A429B7313F00A0F089 /* ListViewController.swift in Sources */,
+				FA5DD8A629B7317B00A0F089 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +373,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +383,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -329,6 +402,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,7 +412,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -364,6 +438,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA5DD89E29B7304B00A0F089 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA5DD89F29B7304B00A0F089 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA5DD89E29B7304B00A0F089 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FA5DD88629B72BA900A0F089 /* Parse_API.xcdatamodeld */ = {
