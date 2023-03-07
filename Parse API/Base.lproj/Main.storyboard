@@ -17,17 +17,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3Nd-cp-QQA">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search name" translatesAutoresizingMaskIntoConstraints="NO" id="Fse-NH-nIB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3qO-UD-hYH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3Nd-cp-QQA" firstAttribute="leading" secondItem="3qO-UD-hYH" secondAttribute="leading" id="3lq-7y-9kl"/>
-                            <constraint firstItem="3Nd-cp-QQA" firstAttribute="top" secondItem="3qO-UD-hYH" secondAttribute="top" id="7bV-Xa-iCl"/>
-                            <constraint firstItem="3Nd-cp-QQA" firstAttribute="bottom" secondItem="3qO-UD-hYH" secondAttribute="bottom" id="ax6-Aj-uOp"/>
-                            <constraint firstItem="3Nd-cp-QQA" firstAttribute="trailing" secondItem="3qO-UD-hYH" secondAttribute="trailing" id="lfY-6Z-jZc"/>
+                            <constraint firstItem="3Nd-cp-QQA" firstAttribute="leading" secondItem="3qO-UD-hYH" secondAttribute="leading" id="1hL-bN-1hq"/>
+                            <constraint firstItem="Fse-NH-nIB" firstAttribute="trailing" secondItem="3qO-UD-hYH" secondAttribute="trailing" id="2o9-Lk-Q4O"/>
+                            <constraint firstItem="3Nd-cp-QQA" firstAttribute="top" secondItem="Fse-NH-nIB" secondAttribute="bottom" id="O6S-eR-jFu"/>
+                            <constraint firstItem="3Nd-cp-QQA" firstAttribute="trailing" secondItem="3qO-UD-hYH" secondAttribute="trailing" id="YBz-Ny-cct"/>
+                            <constraint firstItem="Fse-NH-nIB" firstAttribute="top" secondItem="3qO-UD-hYH" secondAttribute="top" id="bYN-IP-12U"/>
+                            <constraint firstItem="3Nd-cp-QQA" firstAttribute="bottom" secondItem="3qO-UD-hYH" secondAttribute="bottom" id="r3G-sf-blg"/>
+                            <constraint firstItem="Fse-NH-nIB" firstAttribute="leading" secondItem="3qO-UD-hYH" secondAttribute="leading" id="vf0-pg-DNz"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="User List" image="list.bullet.rectangle.portrait" catalog="system" id="B4O-Ic-Wwq"/>
@@ -67,15 +74,49 @@
                     <connections>
                         <segue destination="uv6-l8-PXr" kind="relationship" relationship="viewControllers" id="dx1-Nu-fIH"/>
                         <segue destination="M41-47-7fm" kind="relationship" relationship="viewControllers" id="31i-Ap-Cgc"/>
+                        <segue destination="26h-0e-1lZ" kind="relationship" relationship="viewControllers" id="weQ-i9-TCB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEo-AK-O3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-595" y="-224"/>
         </scene>
+        <!--Page-->
+        <scene sceneID="Np5-Ng-xv2">
+            <objects>
+                <viewController id="26h-0e-1lZ" customClass="PageViewController" customModule="Parse_API" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="533-Jw-QGf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YMo-Ti-xrx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X66-aG-Wub"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YMo-Ti-xrx" firstAttribute="trailing" secondItem="X66-aG-Wub" secondAttribute="trailing" id="InJ-9a-L3N"/>
+                            <constraint firstItem="YMo-Ti-xrx" firstAttribute="bottom" secondItem="X66-aG-Wub" secondAttribute="bottom" id="SiH-tG-Xcv"/>
+                            <constraint firstItem="YMo-Ti-xrx" firstAttribute="leading" secondItem="X66-aG-Wub" secondAttribute="leading" id="kaO-TP-ITE"/>
+                            <constraint firstItem="YMo-Ti-xrx" firstAttribute="top" secondItem="X66-aG-Wub" secondAttribute="top" id="oSp-J5-iBN"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Page" image="paperclip.circle" catalog="system" id="CAj-sH-aik"/>
+                    <connections>
+                        <outlet property="pageTableView" destination="YMo-Ti-xrx" id="Mnj-Le-2ub"/>
+                        <outlet property="userTableView" destination="YMo-Ti-xrx" id="FhV-Ha-cDN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="euL-5E-ZE8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1510" y="175"/>
+        </scene>
     </scenes>
     <resources>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
+        <image name="paperclip.circle" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

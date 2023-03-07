@@ -23,6 +23,7 @@
 		FA5DD8AB29B73B6700A0F089 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5DD8A929B73B6700A0F089 /* UserTableViewCell.xib */; };
 		FA5DD8AD29B73CFA00A0F089 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD8AC29B73CFA00A0F089 /* Constants.swift */; };
 		FA5DD8B029B73E8700A0F089 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD8AF29B73E8700A0F089 /* UserViewModel.swift */; };
+		FA5DD8B229B7425A00A0F089 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD8B129B7425A00A0F089 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		FA5DD8A929B73B6700A0F089 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		FA5DD8AC29B73CFA00A0F089 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA5DD8AF29B73E8700A0F089 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		FA5DD8B129B7425A00A0F089 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				FA5DD89A29B72F6A00A0F089 /* MainTabBarViewController.swift */,
 				FA5DD8A129B7312300A0F089 /* UserViewController.swift */,
 				FA5DD8A329B7313F00A0F089 /* ListViewController.swift */,
+				FA5DD8B129B7425A00A0F089 /* PageViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,6 +124,7 @@
 		FA5DD89729B72BD400A0F089 /* Utlits */ = {
 			isa = PBXGroup;
 			children = (
+				FA5DD8AC29B73CFA00A0F089 /* Constants.swift */,
 			);
 			path = Utlits;
 			sourceTree = "<group>";
@@ -138,7 +142,6 @@
 			children = (
 				FA5DD87D29B72BA900A0F089 /* AppDelegate.swift */,
 				FA5DD87F29B72BA900A0F089 /* SceneDelegate.swift */,
-				FA5DD8AC29B73CFA00A0F089 /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				FA5DD87E29B72BA900A0F089 /* AppDelegate.swift in Sources */,
 				FA5DD8B029B73E8700A0F089 /* UserViewModel.swift in Sources */,
 				FA5DD8AA29B73B6700A0F089 /* UserTableViewCell.swift in Sources */,
+				FA5DD8B229B7425A00A0F089 /* PageViewController.swift in Sources */,
 				FA5DD8A229B7312300A0F089 /* UserViewController.swift in Sources */,
 				FA5DD89B29B72F6A00A0F089 /* MainTabBarViewController.swift in Sources */,
 				FA5DD88829B72BA900A0F089 /* Parse_API.xcdatamodeld in Sources */,
