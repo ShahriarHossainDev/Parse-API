@@ -19,6 +19,10 @@
 		FA5DD8A229B7312300A0F089 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD8A129B7312300A0F089 /* UserViewController.swift */; };
 		FA5DD8A429B7313F00A0F089 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD8A329B7313F00A0F089 /* ListViewController.swift */; };
 		FA5DD8A629B7317B00A0F089 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD8A529B7317B00A0F089 /* Model.swift */; };
+		FA5DD8AA29B73B6700A0F089 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD8A829B73B6700A0F089 /* UserTableViewCell.swift */; };
+		FA5DD8AB29B73B6700A0F089 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5DD8A929B73B6700A0F089 /* UserTableViewCell.xib */; };
+		FA5DD8AD29B73CFA00A0F089 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD8AC29B73CFA00A0F089 /* Constants.swift */; };
+		FA5DD8B029B73E8700A0F089 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DD8AF29B73E8700A0F089 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		FA5DD8A129B7312300A0F089 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		FA5DD8A329B7313F00A0F089 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		FA5DD8A529B7317B00A0F089 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FA5DD8A829B73B6700A0F089 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		FA5DD8A929B73B6700A0F089 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		FA5DD8AC29B73CFA00A0F089 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA5DD8AF29B73E8700A0F089 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,7 @@
 		FA5DD89429B72BB900A0F089 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA5DD8A729B73B2600A0F089 /* Custom Cell */,
 				FA5DD89A29B72F6A00A0F089 /* MainTabBarViewController.swift */,
 				FA5DD8A129B7312300A0F089 /* UserViewController.swift */,
 				FA5DD8A329B7313F00A0F089 /* ListViewController.swift */,
@@ -96,6 +105,7 @@
 		FA5DD89529B72BBF00A0F089 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FA5DD8AF29B73E8700A0F089 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -128,8 +138,18 @@
 			children = (
 				FA5DD87D29B72BA900A0F089 /* AppDelegate.swift */,
 				FA5DD87F29B72BA900A0F089 /* SceneDelegate.swift */,
+				FA5DD8AC29B73CFA00A0F089 /* Constants.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA5DD8A729B73B2600A0F089 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA5DD8A829B73B6700A0F089 /* UserTableViewCell.swift */,
+				FA5DD8A929B73B6700A0F089 /* UserTableViewCell.xib */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5DD8AB29B73B6700A0F089 /* UserTableViewCell.xib in Resources */,
 				FA5DD88D29B72BAA00A0F089 /* LaunchScreen.storyboard in Resources */,
 				FA5DD88A29B72BAA00A0F089 /* Assets.xcassets in Resources */,
 				FA5DD88529B72BA900A0F089 /* Main.storyboard in Resources */,
@@ -210,9 +231,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5DD87E29B72BA900A0F089 /* AppDelegate.swift in Sources */,
+				FA5DD8B029B73E8700A0F089 /* UserViewModel.swift in Sources */,
+				FA5DD8AA29B73B6700A0F089 /* UserTableViewCell.swift in Sources */,
 				FA5DD8A229B7312300A0F089 /* UserViewController.swift in Sources */,
 				FA5DD89B29B72F6A00A0F089 /* MainTabBarViewController.swift in Sources */,
 				FA5DD88829B72BA900A0F089 /* Parse_API.xcdatamodeld in Sources */,
+				FA5DD8AD29B73CFA00A0F089 /* Constants.swift in Sources */,
 				FA5DD89D29B7301D00A0F089 /* APICaller.swift in Sources */,
 				FA5DD88029B72BA900A0F089 /* SceneDelegate.swift in Sources */,
 				FA5DD8A429B7313F00A0F089 /* ListViewController.swift in Sources */,
