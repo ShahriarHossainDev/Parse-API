@@ -40,6 +40,11 @@ struct User: Codable {
     let last_name : String?
     let avatar : String?
     
+    // Color
+    let name : String?
+    let color : String?
+    let pantoneValue : String?
+    
     enum CodingKeys: String, CodingKey {
         
         case id = "id"
@@ -47,6 +52,11 @@ struct User: Codable {
         case first_name = "first_name"
         case last_name = "last_name"
         case avatar = "avatar"
+        
+        // Color
+        case name = "name"
+        case color = "color"
+        case pantoneValue = "pantone_value"
     }
     
     init(from decoder: Decoder) throws {
@@ -56,5 +66,10 @@ struct User: Codable {
         first_name = try values.decodeIfPresent(String.self, forKey: .first_name)
         last_name = try values.decodeIfPresent(String.self, forKey: .last_name)
         avatar = try values.decodeIfPresent(String.self, forKey: .avatar)
+        
+        // Color
+        color = try values.decodeIfPresent(String.self, forKey: .color)
+        name = try values.decodeIfPresent(String.self, forKey: .name)
+        pantoneValue = try values.decodeIfPresent(String.self, forKey: .pantoneValue)
     }
 }

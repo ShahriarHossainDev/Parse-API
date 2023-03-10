@@ -9,11 +9,15 @@ import UIKit
 
 class PageViewController: UIViewController {
     
+    @IBOutlet weak var pageSearchBar: UISearchBar!
     @IBOutlet weak var pageTableView: UITableView!
     
     private var titles: [User] = [User]()
     
     private let cellIdentifier: String = "userCell"
+    
+    var searchedPage = String()
+    var searching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +27,16 @@ class PageViewController: UIViewController {
         pageTableView.separatorStyle = .none
         
         self.pageTableView.register(UINib(nibName: "UserTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        fetchPage()
+        
+        fetchPage(nu: "1")
+        pageSearchBar.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     
     
-    private func fetchPage(){
-        APICaller.shared.getPage(with: "2") { [weak self] result in
+    private func fetchPage(nu: String){
+        APICaller.shared.getPage(with: nu) { [weak self] result in
             switch result {
             case .success(let titles):
                 self?.titles = titles
@@ -68,5 +75,30 @@ extension PageViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+}
+
+
+extension PageViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchedPage = pageSearchBar.text ?? ""
+        if searchedPage == "" {
+            fetchPage(nu: "1")
+        } else {
+            fetchPage(nu: searchedPage)
+        }
+    }
+}
+
+extension PageViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        //let searchBar = searchController.searchBar
+        
+        guard let query = pageSearchBar.text,
+              !query.trimmingCharacters(in: .whitespaces).isEmpty,
+              query.trimmingCharacters(in: .whitespaces).count >= 1 else { return }
+        
+        fetchPage(nu: query)
+        
     }
 }

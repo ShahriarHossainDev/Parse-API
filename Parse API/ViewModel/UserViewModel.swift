@@ -13,3 +13,9 @@ struct UserViewModel {
     let email: String
     let avatarURL: String
 }
+
+struct ColorViewModel {
+    let name : String
+    let color : String
+    let pantoneValue : String
+}
