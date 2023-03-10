@@ -76,4 +76,33 @@ class APICaller {
         }
         task.resume()
     }
+    
+    func createUser(with parameters: String, completion: @escaping (Result<CreateUser, Error>) -> Void) {
+        //let parameters = "{\n    \"name\": \"shishr\",\n    \"job\": \"ios developer\"\n}"
+        let postData = parameters.data(using: .utf8)
+        guard let url = URL(string: "\(Constants.baseURL)\(Constants.allUser)") else { return }
+        var request = URLRequest(url: url,timeoutInterval: Double.infinity)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        request.httpMethod = "POST"
+        request.httpBody = postData
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                return
+            }
+            
+            do {
+                let results = try JSONDecoder().decode(CreateUser.self, from: data)
+                completion(.success(results))
+                print(results)
+            } catch {
+                completion(.failure(APIError.failedTogetData))
+            }
+            //print(String(data: data, encoding: .utf8)!)
+        }
+        
+        task.resume()
+        
+    }
 }

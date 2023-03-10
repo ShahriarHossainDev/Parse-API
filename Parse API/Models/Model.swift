@@ -45,6 +45,8 @@ struct User: Codable {
     let color : String?
     let pantoneValue : String?
     
+    let job : String?
+    
     enum CodingKeys: String, CodingKey {
         
         case id = "id"
@@ -57,6 +59,7 @@ struct User: Codable {
         case name = "name"
         case color = "color"
         case pantoneValue = "pantone_value"
+        case job = "job"
     }
     
     init(from decoder: Decoder) throws {
@@ -71,5 +74,31 @@ struct User: Codable {
         color = try values.decodeIfPresent(String.self, forKey: .color)
         name = try values.decodeIfPresent(String.self, forKey: .name)
         pantoneValue = try values.decodeIfPresent(String.self, forKey: .pantoneValue)
+        
+        job = try values.decodeIfPresent(String.self, forKey: .job)
     }
+}
+
+
+struct CreateUser: Codable {
+    let id : String?
+    let name : String?
+    let job : String?
+    let createdAt: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case name = "name"
+        case job = "job"
+        case createdAt = "createdAt"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = try values.decodeIfPresent(String.self, forKey: .id)
+        name = try values.decodeIfPresent(String.self, forKey: .name)
+        job = try values.decodeIfPresent(String.self, forKey: .job)
+        createdAt = try values.decodeIfPresent(String.self, forKey: .createdAt)
+    }
+    
 }

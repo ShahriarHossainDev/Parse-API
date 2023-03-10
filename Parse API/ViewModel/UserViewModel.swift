@@ -19,3 +19,10 @@ struct ColorViewModel {
     let color : String
     let pantoneValue : String
 }
+
+struct CreateUserViewModel {
+    let id : String
+    let name : String
+    let job : String
+    let createdAt: String
+}
